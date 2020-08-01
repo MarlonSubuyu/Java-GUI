@@ -1,0 +1,50 @@
+/*import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
+
+public class Ejercicio6 extends JFrame{
+
+    private JTextField Ruta;
+    private JLabel Texto;
+
+    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        new Ejercicio6();
+    }
+    public Ejercicio6(){
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+        frame.setTitle("Directorio");
+        Ruta.setEnabled(false);
+        JMenuBar Menu=new JMenuBar();
+        JMenu menu = new JMenu("File");
+        JMenuItem i1 = new JMenuItem("Abrir...");
+        JMenuItem i2 = new JMenuItem("Salir");
+        panel.add(Texto);
+        panel.add(Ruta);
+        menu.add(i1); menu.add(i2);
+        Menu.add(menu);
+        frame.setJMenuBar(Menu);
+
+        frame.setSize(500,500);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel, BorderLayout.CENTER);
+        setBounds(10,50, 50,10);
+        frame.setLayout(null);
+        frame.setVisible(true);
+
+        i1.addActionListener(e -> {
+            JFileChooser j = new JFileChooser();
+            j.setDialogTitle("Elige un archivo");
+            j.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            FileNameExtensionFilter txt = new FileNameExtensionFilter("*.txt", "txt");
+            j.setFileFilter(txt);
+            int seleccion = j.showOpenDialog(j);
+            if(seleccion == JFileChooser.APPROVE_OPTION){
+                Ruta.setText(j.getSelectedFile().getPath());
+            }
+        });
+
+        i2.addActionListener(e -> System.exit(0));
+    }
+}*/
